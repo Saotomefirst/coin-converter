@@ -40,7 +40,7 @@
         >
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/teste3"
+            android:id="@+id/tv_valor"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:inputType="numberDecimal"/>
@@ -101,5 +101,17 @@
         app:layout_constraintStart_toStartOf="@id/guide_start"
         app:layout_constraintEnd_toEndOf="@id/guide_end"
         android:layout_marginTop="@dimen/layout_padding"/>
+
+    <TextView
+        android:id="@+id/tv_result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/guide_start"
+        app:layout_constraintEnd_toEndOf="@id/guide_end"
+        app:layout_constraintTop_toBottomOf="@id/btn_converter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:text="5,27"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Headline3"
+        />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
