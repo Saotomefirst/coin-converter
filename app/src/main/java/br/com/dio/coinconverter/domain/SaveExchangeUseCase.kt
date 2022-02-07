@@ -10,6 +10,10 @@ class SaveExchangeUseCase (
     private val repository: CoinRepository
         ) : UseCase.NoSource<ExchangeResponseValue>() {
     override suspend fun execute(param: ExchangeResponseValue): Flow<Unit> {
-        return flow { repository.save(param)}
+        return flow {
+            repository.save(param)
+            // faltou emitir quando o Use Case está pronto!
+            emit(Unit)
+        }
     }
 }

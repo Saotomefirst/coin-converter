@@ -1,5 +1,6 @@
 package br.com.dio.coinconverter.presentation.di
 
+import br.com.dio.coinconverter.presentation.HistoryViewModel
 import br.com.dio.coinconverter.presentation.MainViewModel
 import org.koin.androidx.viewmodel.dsl.viewModel
 
@@ -16,7 +17,8 @@ object PresentationModel {
         return module {
             // porque o Koin tem a sua dependencia koin-android-ext, não precisamos do single ou do factory
             // usamos a injecao de viewModel
-            viewModel { MainViewModel(get())}
+            viewModel { HistoryViewModel(get())}
+            viewModel { MainViewModel(get(), get())}
         }
     }
 }
